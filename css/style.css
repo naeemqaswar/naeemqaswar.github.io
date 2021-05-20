@@ -33,7 +33,7 @@ h6,
 }
 
 .section {
-  padding: 7rem 0;
+  padding: 6rem 0;
 }
 
 .filters a {
@@ -576,4 +576,31 @@ h6,
 }
 .project-details .project-stack ul li .tech-icon {
   font-size: 30px;
+}
+
+@media (max-width: 425px) {
+  .site-portfolio {
+    padding: 3rem 0;
+  }
+  .header-section h2 {
+    font-weight: 900;
+  }
+  .info-section {
+    text-align: center;
+  }
+  .filters-section .filters {
+    text-align: center;
+  }
+  .portfolio-section .item {
+    padding: 0 15px;
+  }
+  .footer-section {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  .project-details .readmore {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
 }
