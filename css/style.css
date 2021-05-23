@@ -586,6 +586,9 @@ h6,
   .site-portfolio {
     padding: 3rem 0;
   }
+  .site-portfolio .header-section {
+    margin-bottom: 1rem !important;
+  }
   .header-section h2 {
     font-weight: 900;
   }
