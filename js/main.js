@@ -53,7 +53,26 @@
    */
   var portfolioIsotope;
   var portfolioFilters;
-  window.addEventListener("load", () => {
+  var projectsObserver = new MutationObserver(function (mutationList, obsrvr) {
+    var targetElem = document.querySelector("#portfolio-grid .item"); //get div by class
+    let portfolioItemsInDOM = document.getElementsByClassName(
+      "#portfolio-grid .item"
+    ).length;
+    if (targetElem) {
+      setupPortfolioFilters();
+
+      obsrvr.disconnect(); // stop observing
+      return;
+    }
+  });
+  var parentElement = document; // if not sure about parent div then just use whole 'document'
+
+  // projectsObserver.observe(parentElement, {
+  //   childList: true,
+  //   subtree: true,
+  // });
+
+  function setupPortfolioFilters() {
     let _directFilterRequest = getParameterByName("tech");
     let portfolioContainer = select("#portfolio-grid");
 
@@ -78,7 +97,7 @@
         true
       );
     }
-  });
+  }
 
   function filterPortfolioItems(filter) {
     portfolioFilters.forEach(function (el) {
