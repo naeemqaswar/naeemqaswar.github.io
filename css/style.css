@@ -540,14 +540,14 @@ h6,
 # Project Details Popup
 --------------------------------------------------------------*/
 .project-details .top-action {
-  position: absolute;
   right: 15px;
+  text-align: right;
 }
 .project-details .btn-close:focus {
   box-shadow: none;
 }
 .project-details .section {
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 .project-details .portfolio-container {
   margin-bottom: 25px;
